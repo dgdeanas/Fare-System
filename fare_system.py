@@ -28,5 +28,28 @@ class Vehicle(ABC):
 # ===== Jeepney class (Developer A) =====
 
 # ===== Tricycle class (Developer B) =====
-
+class Tricycle(Vehicle):
+    def __init__(self, plate_number, capacity, barangay):
+        self.__plate_number = plate_number
+        self.__capacity = capacity
+        self.__barangay = barangay
+        
+    def get_plate_number(self):
+        return self.__plate_number
+    def set_plate_number(self, plate_number):
+        self.__plate_number = plate_number
+    def get_capacity(self):
+        return self.__capacity
+    def set_capacity(self, capacity):
+        if capacity > 0:
+            self.__capacity = capacity
+        else:
+            return "Invalid capacity"
+    def get_barangay(self):
+        return self.__barangay
+    def set_barangay(self, barangay):
+        self.__barangay = barangay
+    def compute_fare(self, distance_km):
+        pass
+    def describe(self):
 # ===== Test code (Part 6 only) =====
